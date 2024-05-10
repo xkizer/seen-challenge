@@ -42,7 +42,7 @@ Returns the transactions for the given customer ID. The customer ID must be a nu
 
 Sample response data:
 
-```json
+```jsonc
 
   "transactions": [
     {
