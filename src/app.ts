@@ -1,7 +1,7 @@
 import express from "express";
 import { getTransactions } from "./transactions-api";
 import { getRelatedCustomers } from "./customer";
-import { getCustomerTransactionGroups } from "./transactions";
+import { getCustomerTransactionGroups } from "./transaction";
 
 const app = express();
 
