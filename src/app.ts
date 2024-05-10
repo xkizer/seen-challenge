@@ -5,7 +5,7 @@ import { getCustomerTransactionGroups } from "./transaction";
 
 const app = express();
 
-app.get("/transactions/:customerId", async (req, res) => {
+app.get("/transactions/:customerId(\\d+)", async (req, res) => {
   const transactions = await getTransactions();
   const customerId = parseInt(req.params.customerId);
   const transactionGroups = getCustomerTransactionGroups(
@@ -17,7 +17,7 @@ app.get("/transactions/:customerId", async (req, res) => {
 });
 
 // Customers may be related by device or by sending funds to each other.
-app.get("/related-customers/:customerId", async (req, res) => {
+app.get("/related-customers/:customerId(\\d+)", async (req, res) => {
   const transactions = await getTransactions();
   const customerId = parseInt(req.params.customerId);
   const relatedCustomers = getRelatedCustomers(customerId, transactions);
