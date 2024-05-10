@@ -5,13 +5,19 @@
   "scripts": {
     "test": "jest",
     "compile": "tsc",
-    "start": "node dist/index.js"
+    "start": "nodemon --exec node -r ts-node/register src/index.ts"
   },
   "author": "Chinenye Onuegbu",
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@types/node": "^20.12.11",
     "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
     "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
